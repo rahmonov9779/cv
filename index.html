@@ -3,156 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Искандар Рахмонов</title>
+<title>Искандар Рахмонов</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <style>
-body{
+*{
     margin:0;
-    font-family:Arial, sans-serif;
-    background:#f4f4f4;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+body{
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
 }
 .container{
     max-width:1100px;
-    margin:30px auto;
-    display:flex;
-    background:white;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    width:100%;
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:30px;
+}
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(20px);
+    border-radius:24px;
+    padding:30px;
+    box-shadow:0 20px 40px rgba(0,0,0,0.35);
 }
 .left{
-    width:35%;
-    background:#1f2937;
-    color:white;
-    padding:40px 30px;
+    text-align:center;
 }
-.right{
-    width:65%;
-    padding:40px;
+.avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#3b82f6,#8b5cf6);
+    margin:0 auto 20px;
 }
-.profile h1{
-    margin:0;
-    font-size:34px;
-    line-height:1.2;
+h1{
+    font-size:32px;
+    margin-bottom:8px;
 }
-.profile h2{
-    margin-top:10px;
-    color:#d1d5db;
-    font-weight:normal;
-    font-size:18px;
-}
-.section{
-    margin-top:35px;
-}
-.section h3{
-    border-bottom:2px solid #3b82f6;
-    padding-bottom:8px;
-    margin-bottom:15px;
-    font-size:20px;
-}
-.left .section h3{
-    color:#93c5fd;
-}
-ul{
-    padding-left:20px;
-}
-.job{
+.role{
+    color:#94a3b8;
     margin-bottom:25px;
 }
-.job h4{
-    margin:0;
-    color:#2563eb;
-}
-.job span{
-    color:#6b7280;
-    font-size:14px;
-}
-p{
-    line-height:1.6;
+.contact a{
+    color:#93c5fd;
+    text-decoration:none;
 }
 .contact p{
-    margin:8px 0;
+    margin:10px 0;
+}
+.github-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    color:white;
+    text-decoration:none;
+    border-radius:14px;
+    transition:0.3s;
+    font-weight:600;
+}
+.github-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(59,130,246,0.4);
+}
+.section{
+    margin-bottom:30px;
+}
+.section h2{
+    margin-bottom:18px;
+    font-size:22px;
+    color:#60a5fa;
+}
+.skill{
+    display:inline-block;
+    padding:10px 16px;
+    margin:8px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.06);
+    transition:0.3s;
+}
+.skill:hover{
+    background:rgba(59,130,246,0.25);
+    transform:scale(1.05);
+}
+.job{
+    margin-bottom:22px;
+    padding-bottom:18px;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+}
+.job h3{
+    color:#f8fafc;
+}
+.job span{
+    color:#94a3b8;
+    font-size:14px;
+}
+.job p{
+    margin-top:8px;
+    color:#cbd5e1;
+    line-height:1.6;
+}
+.about{
+    color:#cbd5e1;
+    line-height:1.8;
 }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="left">
-        <div class="profile">
-            <h1>Искандар<br>Рахмонов</h1>
-            <h2>Middle Mobile Developer</h2>
-        </div>
 
-        <div class="section contact">
-            <h3>Контакты</h3>
+    <div class="card left">
+        <div class="avatar"></div>
+        <h1>Искандар Рахмонов</h1>
+        <p class="role">Middle Mobile Developer</p>
+
+        <div class="contact">
             <p>📍 Худжанд, Таджикистан</p>
             <p>📞 +992 97 243 68 68</p>
             <p>✉️ rir9779@gmail.com</p>
         </div>
 
-        <div class="section">
-            <h3>Навыки</h3>
-            <ul>
-                <li>Flutter / Dart</li>
-                <li>Swift / Kotlin</li>
-                <li>PHP / Python / JS</li>
-                <li>Django / Laravel</li>
-                <li>Vue.js</li>
-                <li>Git / GitHub</li>
-                <li>MySQL / PostgreSQL</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h3>Языки</h3>
-            <ul>
-                <li>Русский</li>
-                <li>Английский</li>
-                <li>Узбекский</li>
-            </ul>
-        </div>
+        <a class="github-btn" href="https://github.com/rahmonov9779" target="_blank">
+            GitHub Profile
+        </a>
     </div>
 
-    <div class="right">
+    <div class="card">
         <div class="section">
-            <h3>Обо мне</h3>
-            <p>
-                Специалист в области IT с навыками мобильной и веб разработки,
-                программирования и создания современных цифровых решений.
-                Опыт разработки приложений под iOS и Android, backend и frontend.
+            <h2>Обо мне</h2>
+            <p class="about">
+                IT специалист с сильным опытом в мобильной и веб разработке.
+                Создаю современные приложения для iOS и Android, backend решения,
+                а также пользовательские интерфейсы которые выглядят дорого
+                и работают быстро.
             </p>
         </div>
 
         <div class="section">
-            <h3>Опыт работы</h3>
+            <h2>Навыки</h2>
+            <span class="skill">Flutter</span>
+            <span class="skill">Dart</span>
+            <span class="skill">Swift</span>
+            <span class="skill">Kotlin</span>
+            <span class="skill">Python</span>
+            <span class="skill">PHP</span>
+            <span class="skill">Vue.js</span>
+            <span class="skill">Django</span>
+            <span class="skill">Laravel</span>
+            <span class="skill">Git</span>
+        </div>
+
+        <div class="section">
+            <h2>Опыт работы</h2>
 
             <div class="job">
-                <h4>МКО "Оксус"</h4>
-                <span>апрель 2025 — настоящее время</span>
-                <p>Middle Mobile Developer — разработка и поддержка мобильных приложений iOS и Android.</p>
+                <h3>МКО "Оксус"</h3>
+                <span>2025 — настоящее время</span>
+                <p>Разработка и поддержка мобильных банковских приложений под iOS и Android.</p>
             </div>
 
             <div class="job">
-                <h4>tijoratpro</h4>
-                <span>декабрь 2024 — март 2025</span>
-                <p>Junior Fullstack Developer — разработка CRM на Django + Vue.js.</p>
+                <h3>TijoratPro</h3>
+                <span>2024 — 2025</span>
+                <p>Участие в создании CRM системы на Django + Vue.js.</p>
             </div>
 
             <div class="job">
-                <h4>ОАО "Алиф"</h4>
+                <h3>ОАО "Алиф"</h3>
                 <span>2021 — 2023</span>
-                <p>Старший кредитный эксперт и специалист по обслуживанию клиентов.</p>
+                <p>Работа с клиентами, анализ и автоматизация внутренних процессов.</p>
             </div>
         </div>
 
-        <div class="section">
-            <h3>Образование</h3>
-            <p>
-                <strong>Политехнический университет Таджикистана</strong><br>
-                Бакалавр технологических наук — 2025
-            </p>
-        </div>
     </div>
+
 </div>
 
 </body>
 </html>
-
